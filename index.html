@@ -3,31 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- custom style -->
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
     
+    <div id="main"><!-- main content -->
+        <section id="header-showcase"> <!-- header with showcase -->
+            <!-- header -->
+            <header class="header py-2 relative bg-transparent text-light">
+                <div class="container">
+                    <div class="nav flex items-center justify-between">
+                        <div class="logo">
+                            <h1 class="fs-6 text-warning font-secondary">Restaurant</h1>
+                        </div>
+                        <div class="mobile-btn md-none" id="mobileBtn" data-target="#sidebar1">
+                            <button><i class="fa-solid fa-bars fs-4 text-light"></i></button>
+                        </div>                
+                        <nav class="links none md-block">
+                            <ul class="flex items-center gap-3">
+                                <li><a href="#" class="fs-2 text-light">Home</a></li>
+                                <li><a href="#" class="fs-2 text-light">Menu</a></li>
+                                <li><a href="#" class="fs-2 text-light">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <!-- /header -->
+            <section id="showcase" class="showcase">
+                <div class="container">
+                    <div class="flex items-center justify-center flex-column">
+                        <h1 class="text-warning fs-12 font-secondary">Restaurant</h1>
+                        <h3 class="text-light fs-4">Confira nosso menu</h3>
+                        <a href="/menus" class="mt-5 text-dark fs-3 bg-danger py-2 px-3 border-radius-1">Ver</a>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div> <!-- /main content -->
 
-    <header class="header py-2">
-        <div class="container">
-            <div class="nav flex items-center justify-between">
-                <div class="logo">
-                    <h1>Restaurant</h1>
+    <!-- reservations -->
+    <section class="reservations" id="reservations">
+        <div class="container mt-12">
+            <h1 class="fs-12 text-danger font-secondary text-center">Faça uma reserva</h1>
+            <div class="flex items-center justify-around flex-column md-flex-row mt-5">
+                <div>
+                    <form action="">
+                        <label for="name" class="fs-1">Nome</label>
+                        <input type="text" name="name" id="name" placeholder="Digite seu nome">
+                        <label for="email" class="fs-1">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Digite seu email">
+                        <label for="hour" class="fs-1">Hora</label>
+                        <input type="time" name="hour" id="hour">
+                        <label for="date" class="fs-1">Data</label>
+                        <input type="date" name="date" id="date">
+                        <label for="people" class="fs-1">Pessoas</label>
+                        <select name="people" id="people">
+                            <option value="">--Selecione--</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5+</option>
+                        </select>
+                        <button type="submit" class="block text-light bg-danger fs-2 px-3 py-2 border-radius-1 mb-5">Reservar</button>
+                    </form>
                 </div>
-                <div class="mobile-btn">
-                    <button>---</button>
+                <div class="mt-5">
+                    local
                 </div>
-                <nav class="links none">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
             </div>
         </div>
-    </header>
+    </section>
+    <!-- /reservations -->
+    <!-- sidebar -->   
+    <aside id="sidebar1" class="sidebar absolute w-50 h-100 top-0 left-100min bg-dark text-light">
+        <button type="button" id="closeBtn" data-target="#sidebar1" class="text-light fs-5 absolute top-10 right-25"><i class="fa-solid fa-xmark"></i></button>
+        <ul class="flex items-center justify-center flex-column h-100 sidebar-items">
+            <li class="py-2"><a href="#" class="fs-2 text-light">Home</a></li>
+            <li class="py-2"><a href="#" class="fs-2 text-light">Menu</a></li>
+            <li class="py-2"><a href="#" class="fs-2 text-light">Contact</a></li>
+        </ul>
+    </aside>
+    <!-- /sidebar -->
+
+    
+
+    <script src="js/app.js"></script>
+
 
 </body>
 </html>
